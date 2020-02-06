@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-int range = 11;
+int range = 51;
 
 void print_matrix(int8_t **A, int M, int N) {
     int i, j;
@@ -43,7 +43,7 @@ int8_t ** generate_matrix(int M, int N){
         // uncomment to group up rows (then no print)
 //        int count = 0;
         for (j = 0; j < N; ++j) {
-            *(*(A+i)+ j)= rand() % range;
+            *(*(A+i)+ j)= random() % range;
 //            int8_t num = rand() % range;
 //            if (!is_in_row(*(A+i), num, count)){
 //                *(*(A+i)+ ++count)= num;
@@ -55,7 +55,7 @@ int8_t ** generate_matrix(int M, int N){
 
 int main() {
     clock_t start = clock();
-    srand(time(NULL));
+    srandom(time(NULL));
     int N = 0, M = 0, count = 0;
     int i;
     printf("Программа находит количество строк в заданной матрице A размером M x N, которые похожи на первую (все элементы заданной строки есть в первой).\n");
