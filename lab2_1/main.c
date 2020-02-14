@@ -45,7 +45,7 @@ int insert_in_row(int8_t *row, int8_t num, int N) {
 
 int count_in_sort_matrix(int8_t **A, int M, int N) {
     // Group matrix
-    int8_t *size_array = (int8_t *) malloc(N * sizeof(int8_t));
+    int8_t *size_array = (int8_t *) malloc(M * sizeof(int8_t));
     int i, j;
     int8_t **B = (int8_t **) malloc(M * sizeof(int8_t *));
     for (i = 0; i < M; ++i) {
@@ -72,7 +72,7 @@ int count_in_sort_matrix(int8_t **A, int M, int N) {
     int count_similar = 0;
     for (i = 1; i < M; ++i) {
         int flag = 1;
-        if (size_array[0] == size_array[1]) {
+        if (size_array[0] == size_array[i]) {
             for (j = 0; j < size_array[0]; ++j) {
                 if (B[0][j] != B[i][j]) {
                     flag = 0;
