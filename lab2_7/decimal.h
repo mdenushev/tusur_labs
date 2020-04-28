@@ -6,6 +6,7 @@
 #define LAB2_7_DECIMAL_H
 
 #include "utils.h"
+#include <stdlib.h>
 typedef struct {
     long body;
     int power;
