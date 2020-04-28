@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-int range = 11;
+int range = 6;
 
 void print_matrix(int8_t **A, int M, int N) {
     int i, j;
